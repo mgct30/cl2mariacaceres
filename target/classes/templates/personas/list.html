@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- OK  -->
+    <h1>Lista de personas</h1>
+    <a th:href="@{/personas/create}">Registrese</a>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Dni</td>
+                <td>Edad</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="persona : ${superListadoo}">
+                <td th:text="${persona.id}"></td>
+                <td th:text="${persona.nombre}"></td>
+                <td th:text="${persona.apellido}"></td>
+                <td th:text="${persona.dni}"></td>
+                <td th:text="${persona.edad}"></td>
+
+
+                <td>
+                    <a th:href="@{/personas/{id}(id=${persona.id})}">Ver</a>
+
+                </td>
+                <td>
+                    <a th:href="@{/personas/edit/{id}(id=${persona.id})}">Editar</a>
+
+                </td>
+                <td>
+                    <a th:href="@{/personas/delete/{id}(id=${persona.id})}">Eliminar</a>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

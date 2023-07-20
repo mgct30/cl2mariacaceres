@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cl2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<a th:href="@{/personas}">Personas</a>
+
+<h1>Registrar Persona</h1>
+<form th:action="@{/personas}" th:object="${persona}" method="post">
+    <p>Nombre: <input type="text" th:field="*{nombre}"/></p>
+    <p>Apellido: <input type="text" th:field="*{apellido}"/></p>
+    <p>Dni: <input type="text" th:field="*{dni}"/></p>
+    <p>Edad: <input type="tel" th:field="*{edad}"/></p>
+    <button>Registrar</button>
+</form>
+</body>
+</html>

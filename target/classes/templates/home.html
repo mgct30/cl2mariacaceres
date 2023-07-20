@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="stylesheet" href="/src/main/resources/static/Estilos.css">
+    <title>Mantenimiento Personas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background-color: #74e2be; /* Cambia el color de fondo según tus preferencias */
+        }
+        
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .center img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        h1, p {
+            font-size: 30px; /* Ajusta el tamaño de fuente según tus preferencias */
+            color: black; /* Cambia el color del texto a negro */
+        }
+        
+        a {
+            font-size: 22px; /* Ajusta el tamaño de fuente de los enlaces según tus preferencias */
+            color: black; /* Cambia el color de los enlaces a negro */
+            text-decoration: none; /* Elimina la decoración subrayada de los enlaces */
+        }
+
+        .links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+    </style>
+    
+</head>
+<body>
+    <a th:href="@{/personas}"> BIENVENIDO </a>
+</body>
+</html>
