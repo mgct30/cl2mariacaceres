@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de persona</title>
+</head>
+<body>
+
+    <a th:href="@{/personas}"> regresar </a>
+
+    <h1>Producto <span th:text="${persona.nombre}"></span></h1>
+    <p>Apellido: <span th:text="${persona.apellido}"></span></p>
+    <p>Dni <span th:text="${persona.dni}"></span></p>
+    <p>Edad <span th:text="${persona.edad}"></span></p>
+
+</body>
+</html>
